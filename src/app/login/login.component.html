@@ -1,0 +1,47 @@
+<div class="container">
+    <!-- <div class="row">
+      <div class="col-4">
+        
+      </div>
+      <div class="col-6 contorno">
+        <div class="card" style="width: 100%;">
+            <label for="user" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="user" aria-describedby="emailHelp">
+            <br>
+            <label for="user" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="user" aria-describedby="emailHelp">
+        </div>
+      </div>
+      <div class="col-4">
+        
+      </div>
+    </div> -->
+    
+        <div class="row" style="margin-top: 10%;">
+          <div class="col-lg-4">
+            
+          </div>
+          <div class="col-lg-4">
+            <div class="quadro border" style="width: 100%;">
+                <h3 class="text-center" style="margin-top: -7%;">Login</h3>
+                <label for="user" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="user" [(ngModel)]="user" aria-describedby="emailHelp">
+                <br>
+                <label for="user" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="password" [(ngModel)]="password" aria-describedby="emailHelp">
+                <br>
+                <div class="row">
+                    <div class="col-lg-4"></div>
+                    <div class="col-lg-4">
+                        <button type="button" (click)="logar()" class="btn btn-primary">Acessar</button>
+                    </div>
+                    <div class="col-lg-4"></div>
+                </div>
+                
+            </div>
+          </div>
+          <div class="col-lg-4">
+            
+          </div>
+        </div>
+  </div>

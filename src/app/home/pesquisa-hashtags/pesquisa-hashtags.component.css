@@ -1,0 +1,9 @@
+.contorno{
+    border-color: black;
+    background-color: blue;
+}
+.quadro{
+    padding: 8% 5% 10% 5%;
+    box-shadow: 0 0 5px 3px rgb(236, 236, 236);
+    background-color: rgb(255, 255, 255);
+}
