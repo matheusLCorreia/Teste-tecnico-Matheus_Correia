@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { PesquisaHashtagsComponent } from './pesquisa-hashtags/pesquisa-hashtags.component';
+import { HashMonitoradaComponent } from './hash-monitorada/hash-monitorada.component';
 
 export const AplicacaoRoutes: Routes = [
   {
@@ -17,6 +18,10 @@ export const AplicacaoRoutes: Routes = [
       {
         path: 'pesquisa-hashtags',
         component: PesquisaHashtagsComponent
+      },
+      {
+        path: 'hashtags-monitoradas',
+        component: HashMonitoradaComponent
       }
     ]
   }

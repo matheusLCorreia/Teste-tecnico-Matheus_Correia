@@ -7,8 +7,8 @@ import { AplicacaoModule } from './home/aplicacao.module';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'aplicacao', loadChildren: () => import('./home/aplicacao.module').then(m => m.AplicacaoModule) },
   { path: '', redirectTo:'login', pathMatch: 'full' },
+  { path: 'aplicacao', loadChildren: () => import('./home/aplicacao.module').then(m => m.AplicacaoModule) },
   { path: '**', component: NaoEncontradaComponent}
 ];
 
