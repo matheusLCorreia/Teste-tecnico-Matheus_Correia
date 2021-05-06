@@ -1,6 +1,12 @@
 # HashtagsTwitter
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) wersão 11.2.11.
+
+## Componentes externos
+
+SweetAlert 2,
+ngx-spinner (https://www.npmjs.com/package/ngx-spinner),
+Angular Material, Bootstrap, Font Awesome
 
 <!-- ## Development server
 
