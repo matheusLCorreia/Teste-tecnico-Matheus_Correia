@@ -1,6 +1,6 @@
 # HashtagsTwitter
 
-Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) wersão 11.2.11.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 11.2.11.
 
 ## Componentes externos
 
