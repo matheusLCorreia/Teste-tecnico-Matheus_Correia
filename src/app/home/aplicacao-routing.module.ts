@@ -12,7 +12,7 @@ export const AplicacaoRoutes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'pesquisa-hashtags',
+        redirectTo: '/login',
         pathMatch: 'full'
       },
       {

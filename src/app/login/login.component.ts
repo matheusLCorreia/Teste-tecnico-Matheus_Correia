@@ -18,12 +18,24 @@ export class LoginComponent implements OnInit {
 
   logar(){
     // fazer requisição aqui
-    let form_data = {
+    /*let form_data = {
       password: this.password,
       user: this.user
+    }*/
+    
+    if(this.user == "matheus@hotmail.com" && this.password == "123"){
+      window['spinner'].show();
+      setTimeout(() => {
+        window['spinner'].hide();
+        Swal.fire('Sucesso', 'Login efetuado com sucesso!', 'success').then((value) => {
+          this.route.navigate(['aplicacao/pesquisa-hashtags']);
+        });
+      }, 2000);
     }
-    console.log(form_data);
-    Swal.fire('Sucesso', 'Login efetuado com sucesso!', 'success');
-    this.route.navigate(['aplicacao']);
+    else{
+      Swal.fire('Erro', 'Usuário não encontrado.', 'error');
+    }
+    
+    
   }
 }

@@ -5,13 +5,25 @@
         
         </div>
         <div class="col-lg-6">
-            <div class="quadro border" style="width: 100%; border-radius: 4.5px;">
-                <label for="hashtag" class="form-label">Hash Tag(#)</label>
-                <input type="text" class="form-control" id="hashtag" placeholder="#hashtag" [(ngModel)]="hashtag">
-
-                <br>
-                <button type="button" class="btn btn-primary" (click)="pesquisar()">Buscar</button>
-            </div>
+            <mat-card>
+                <mat-card-title>Hashtags(#)</mat-card-title>
+                <mat-card-subtitle>Pesquise aqui hashtags do Twitter!</mat-card-subtitle>
+                <mat-card-content>
+                    <div style="width: 100%; margin-top: 3%;">
+                        <input type="text" class="form-control" id="hashtag" (input)="pesquisar()" placeholder="#hashtag" [(ngModel)]="hashtag">
+                        <span style="color: rgb(199, 60, 60);">{{ msg }}</span>
+                        <br>
+                        <button mat-flat-button (click)="salvarHashs()" *ngIf="result_search.length > 0" style="background-color: rgba(29,161,242,1.00); color: white; margin-top: 5px;">Salvar</button>
+                    </div>
+                    <div>
+                        <mat-list role="list">
+                            <mat-list-item role="listitem" *ngFor="let res of result_search">
+                                {{ res }}
+                            </mat-list-item>
+                        </mat-list>
+                    </div>
+                </mat-card-content>
+            </mat-card>
         </div>
         <div class="col-lg-3">
         

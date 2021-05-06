@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container-fluid">
       
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,20 +9,7 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="pesquisa-hashtags">Hash Tags</a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li> -->
-          <!-- <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li> -->
+          
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" routerLink="hashtags-monitoradas">#Monitorada</a>
           </li>
@@ -30,6 +17,38 @@
         
       </div>
     </div>
-  </nav>
-  <router-outlet></router-outlet>
+  </nav> -->
+
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="over" #sidenav [(opened)]="abrir">
+      <mat-list role="list">
+        <mat-list-item role="listitem" (click)="goToLocation('/aplicacao/pesquisa-hashtags')" [ngClass]="{ativa: route.url == '/aplicacao/pesquisa-hashtags'}">Hashtags</mat-list-item>
+        <mat-list-item role="listitem" (click)="goToLocation('/aplicacao/hashtags-monitoradas')" [ngClass]="{ativa: route.url == '/aplicacao/hashtags-monitoradas'}" >Hashtags Monitoradas</mat-list-item>
+      </mat-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="padding-bottom: 2%; background-color: rgba(29,161,242,1.00);">
+        <button mat-button (click)="sidenav.toggle()">
+          <mat-icon aria-hidden="false" aria-label="Example home icon" style="color: white;">menu</mat-icon>
+        </button>
+        <!-- <div>
+          <span style="color: white; font-size: 22px;">#Hash_tags</span>
+        </div> -->
+      </div>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+    
+  </mat-sidenav-container>
+  
+  <!-- <mat-drawer-container>
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+    <mat-drawer-content>Main content</mat-drawer-content>
+  </mat-drawer-container> -->
+
+  <!-- <mat-sidenav-container class="example-container">
+    <mat-sidenav opened mode="side">Start content</mat-sidenav>
+    <mat-sidenav opened mode="side" position="end">End content</mat-sidenav>
+    Implicit main content
+  </mat-sidenav-container> -->
+  <!-- <router-outlet></router-outlet> -->
   
