@@ -1,4 +1,4 @@
-<h1>INICIO</h1>
+<h1>INICIO 2</h1>
 # HashtagsTwitter
 
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 11.2.11.
